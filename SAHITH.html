@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IMGE TRANSITION </title>
+    <link rel="stylesheet" href="sahith.css">
+</head>
+<body> 
+<div class="container">
+
+    <div class="img-box">
+        <img src="image/transparent.png" width="100%">
+       
+        <div class="img-wrap">
+        <img src="image/original.jpg" id="orginalImg">
+    </div>
+
+    </div>
+</div>
+<script>
+     
+     var ImgBox = document.querySelector(".img-box");
+     var imgWrap = document.querySelector(".img-wrap");
+    var orginalImg = document.getElementById("orginalImg");
+    
+
+    orginalImg.style.width = ImgBox.offsetwidth + "px";
+
+
+
+    var leftSpace = ImgBox.offsetLeft;
+
+     ImgBox.onmousemov = function(e){
+          var boxWidth = (e.pageX - leftSpace) + "px";
+          imgWrap.style.width = boxWidth;
+     }
+
+</script>
+</body>
+</html>
